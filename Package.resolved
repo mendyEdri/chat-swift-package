@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "lit-networking",
+        "repositoryURL": "git@github.com:mendyEdri/lit-networking.git",
+        "state": {
+          "branch": "master",
+          "revision": "b34398d1c7f045237927abbe564f88688ef9720b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

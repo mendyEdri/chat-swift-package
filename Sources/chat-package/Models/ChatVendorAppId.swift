@@ -12,11 +12,11 @@ import Foundation
 
 public struct ChatVendorAppId: Codable, Equatable {
     
-    var responseHeader: ResponseHeader
-    var meta: ResponseMetadata
+    public var responseHeader: ResponseHeader
+    public var meta: ResponseMetadata
     
     // The only one actually in use :|
-    var appId: String
+    public var appId: String
     
     enum CodingKeys: String, CodingKey {
         case responseHeader

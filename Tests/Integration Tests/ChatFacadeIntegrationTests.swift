@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ChatClient
+import chat_package
 
 class ChatFacadeIntegrationTests: XCTestCase {
     

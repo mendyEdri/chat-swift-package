@@ -9,10 +9,10 @@
 import Foundation
 
 public struct AccessToken: Codable {
-    var accessToken: String
-    var refreshToken: String
-    var type: String
-    var expiration: TimeInterval
+    public var accessToken: String
+    public var refreshToken: String
+    public var type: String
+    public var expiration: TimeInterval
     
     enum CodingKeys: String, CodingKey {
         case accessToken = "access_token"

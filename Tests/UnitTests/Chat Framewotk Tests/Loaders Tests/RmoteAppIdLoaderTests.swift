@@ -8,7 +8,7 @@
 
 import XCTest
 import lit_networking
-@testable import ChatClient
+@testable import chat_package
 
 class RmoteAppIdLoaderTests: XCTestCase {
     

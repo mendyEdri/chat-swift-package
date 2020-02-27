@@ -35,7 +35,7 @@ final public class ChatFacade {
         mediator.logout { _ in done() }
     }
     
-    func showWhenReady(_ completion: ((ClientMediator.ClientState) -> Void)? = nil) {
+    public func showWhenReady(_ completion: ((ClientMediator.ClientState) -> Void)? = nil) {
         prepare { [weak self] result in
             switch result {
             case .ready:

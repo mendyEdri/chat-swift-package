@@ -7,8 +7,8 @@
 //
 
 import XCTest
-import ChatClient
 import lit_networking
+import chat_package
 
 class RemoteIdentityStoreLoaderTests: XCTestCase {
     

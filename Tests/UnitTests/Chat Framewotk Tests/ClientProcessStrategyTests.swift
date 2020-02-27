@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ChatClient
+@testable import chat_package
 
 class ClientProcessStrategyTests: XCTestCase {
     

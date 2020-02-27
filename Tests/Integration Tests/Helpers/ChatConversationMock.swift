@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import ChatClient
+@testable import chat_package
 
 class ChatConversationMock: ChatConversation {
     

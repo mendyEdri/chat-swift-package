@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import ChatClient
+@testable import chat_package
 
 struct BuilderHelper {
     func buildSuccessHeaderAndMeta() -> (header: ResponseHeader, meta: ResponseMetadata) {

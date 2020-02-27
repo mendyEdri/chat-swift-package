@@ -8,7 +8,7 @@
 
 import Foundation
 import lit_networking
-@testable import ChatClient
+@testable import chat_package
 
 class Clients {
     let chatClient = ChatClientSpy()

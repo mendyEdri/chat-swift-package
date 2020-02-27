@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ChatClient
+import chat_package
 
 final class ChatClientSpy: ChatClient {    
     

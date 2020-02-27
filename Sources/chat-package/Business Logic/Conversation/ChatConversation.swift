@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol ConversationMessages {
+public protocol ConversationMessages {
     var unreadMessages: Int { get }
     func unreadMessagesCountDidChange(_ onChange: @escaping (Int) -> Void)
 }
 
-protocol ChatConversation: ConversationMessages {
+public protocol ChatConversation: ConversationMessages {
     func showConversation()
     var settings: ConversationSettings { get set }
 }

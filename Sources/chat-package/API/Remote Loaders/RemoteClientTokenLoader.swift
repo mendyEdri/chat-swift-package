@@ -35,7 +35,7 @@ final public class RemoteClientTokenLoader {
         self.retryDecorator = HTTPClientRetryDecorator(http: client, retryable: retry)
     }
     
-    func load(with tokenAdapter: AccessTokenAdapter, completion: @escaping (Result) -> Void) {
+    public func load(with tokenAdapter: AccessTokenAdapter, completion: @escaping (Result) -> Void) {
         tokenDecorator = HTTPClientAccessTokenDecorator(http: retryDecorator, tokenAdapter: tokenAdapter)
         tokenDecorator?.get(from: URLS.env.smoochVendorToken, method: .POST, headers: Headers.pairs()) { result in
             switch result {

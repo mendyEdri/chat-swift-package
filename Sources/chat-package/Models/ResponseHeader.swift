@@ -11,5 +11,5 @@ import Foundation
 /** Data response model  for mapping STS and STS-metadata response header object */
 
 public struct ResponseHeader: Codable, Equatable {
-    var statusMessage: String
+    public var statusMessage: String
 }

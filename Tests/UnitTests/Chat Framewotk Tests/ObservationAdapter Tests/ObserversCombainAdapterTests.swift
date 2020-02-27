@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import ChatClient
+import chat_package
 
 private extension Notification.Name {
     static let office = Notification.Name("working-from-office")

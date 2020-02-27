@@ -11,12 +11,12 @@ import Foundation
 /** Data response model for mapping STS response */
 public struct ChatVendorToken: Equatable, Codable {
     
-    var header: ResponseHeader
-    var tokenType: String
-    var accessToken: String
-    var expiration: TimeInterval
-    var cwtToken: String
-    var metadata: ResponseMetadata
+    public var header: ResponseHeader
+    public var tokenType: String
+    public var accessToken: String
+    public var expiration: TimeInterval
+    public var cwtToken: String
+    public var metadata: ResponseMetadata
     
     enum CodingKeys: String, CodingKey {
         case header = "responseHeader"

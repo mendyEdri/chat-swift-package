@@ -10,46 +10,46 @@ import Foundation
 
 /** Modular Jwt, suitable for myCWT needs */
 
-protocol Jwtable {
+public protocol Jwtable {
     func isJwtExp() throws -> Bool
     var jwtString: String { get set }
     var parser: JwtParserable { get }
     func value(for key: String) -> String?
 }
 
-struct Jwt: Jwtable {
+public struct Jwt: Jwtable {
     
-    enum Error: Swift.Error {
+    public enum Error: Swift.Error {
         case invalid
     }
         
-    var jwtString: String {
+    public var jwtString: String {
         didSet {
             parser.jwt(self.jwtString)
         }
     }
     
-    var parser: JwtParserable
+    public var parser: JwtParserable
     
-    init() {
+    public init() {
         parser = JwtDefaultParser(jwt: "")
         self = Jwt(string: "", parser: parser)
     }
     
-    init(string: String, parser: JwtParserable) {
+    public init(string: String, parser: JwtParserable) {
         self.jwtString = string
         
         self.parser = parser
         self.parser.jwt(jwtString)
     }
     
-    func value(for key: String) -> String? {
+    public func value(for key: String) -> String? {
         return parser.value(for: key) as? String
     }
     
     // MARK: Jwtable Implementation
     
-    func isJwtExp() throws -> Bool {
+    public func isJwtExp() throws -> Bool {
         guard let experation = parser.value(for: CommonKeys.experation.rawValue) as? Double else {
             throw Error.invalid
         }

@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct ConversationSettings {
-    var email: String
-    var userId: String
-    var cwtJWT: String
+public struct ConversationSettings {
+    public var email: String
+    public var userId: String
+    public var cwtJWT: String
 }

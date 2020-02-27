@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol JwtParserable {
+public protocol JwtParserable {
     func keyValue() -> [String: Any]
     func value(for key: String) -> Any?
     func jwt(_ string: String)
@@ -27,15 +27,15 @@ public class JwtDefaultParser: JwtParserable {
     
     // MARK: JWTParsable Implementation
     
-    func jwt(_ string: String) {
+    public func jwt(_ string: String) {
         jwtString = string
     }
     
-    func keyValue() -> [String : Any] {
+    public func keyValue() -> [String : Any] {
         return parser.parseJWT(token: jwtString)
     }
     
-    func value(for key: String) -> Any? {
+    public func value(for key: String) -> Any? {
         return keyValue()[key]
     }
 }
